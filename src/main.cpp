@@ -17,19 +17,30 @@ public:
     
     // Utils
     void read(){
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9; j++){
                 cin >> data.at(i).at(j);
             }
         }
     }
     void print(){
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                cout << data.at(i).at(j) << " ";
+        for(int i = 0; i < 9; i++){
+            cout << "-------------------------------------\n";
+            for(int j = 0; j < 9; j++){
+                if (j == 0)
+                {
+                    cout << "| ";
+                }
+                else
+                {
+                    /* code */
+                }
+                
+                cout << data.at(i).at(j) << " | ";
             }
             cout << endl;
         }
+        cout << "-------------------------------------\n";
     }
 };
 
