@@ -27,13 +27,10 @@ public:
         for(int i = 0; i < 9; i++){
             cout << "-------------------------------------\n";
             for(int j = 0; j < 9; j++){
+
                 if (j == 0)
                 {
                     cout << "| ";
-                }
-                else
-                {
-                    /* code */
                 }
                 
                 cout << data.at(i).at(j) << " | ";
