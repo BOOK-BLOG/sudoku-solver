@@ -3,7 +3,7 @@
 #include <vector>
 #include <array>
 
-#include "sudoku.hpp"
+#include "sudoku.h"
 
 #define DEBUG
 
