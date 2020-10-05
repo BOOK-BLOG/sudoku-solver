@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstdio>
 #include <array>
+#include <fstream>
 
 using namespace std;
 
@@ -21,13 +22,20 @@ public:
     string thick_horizontal_divider = "|===================================|\n";
     string horizontal_divider = "|-----------------------------------|\n";
 
-    void read()
+    void command_line_input()
     {
         for(int i = 0; i < 9; i++){
             for(int j = 0; j < 9; j++){
                 cin >> data.at(i).at(j);
             }
         }
+    }
+
+    void read_file(string path)
+    {
+        ifstream file;
+        file.open(path, ios::out | ios::in);
+        
     }
 
     void print()

@@ -13,7 +13,7 @@ using namespace std;
 void debug()
 {
     Sudoku sudoku = Sudoku();
-    sudoku.read();
+    sudoku.command_line_input();
     sudoku.print();
     cout << "to_string()" << endl;
     cout << sudoku.to_string();
