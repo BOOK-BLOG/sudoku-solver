@@ -12,12 +12,17 @@ class Sudoku
 {
 public:
     array<array<char, 9>, 9> data;
-    
+
     Sudoku()
     {
         
     }
-    
+
+    Sudoku solve()
+    {
+        
+    }
+
     // Utils
     string thick_horizontal_divider = "|===================================|\n";
     string horizontal_divider = "|-----------------------------------|\n";
@@ -40,27 +45,7 @@ public:
 
     void print()
     {
-        cout << thick_horizontal_divider;
-        for(int i = 0; i < 9; i++)
-        {
-            if (i != 0)
-            {
-                cout << horizontal_divider;
-            }
-            
-            for(int j = 0; j < 9; j++)
-            {
-
-                if (j == 0)
-                {
-                    cout << "| ";
-                }
-                
-                cout << data.at(i).at(j) << " | ";
-            }
-            cout << endl;
-        }
-        cout << thick_horizontal_divider;
+        cout << to_string();
     }
 
     string to_string()

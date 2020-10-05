@@ -15,7 +15,7 @@ void debug()
     Sudoku sudoku = Sudoku();
     sudoku.command_line_input();
     sudoku.print();
-    cout << "to_string()" << endl;
+    cout << endl << "to_string()" << endl;
     cout << sudoku.to_string();
 }
 #endif
@@ -26,6 +26,9 @@ int main(int argc, char* agrv[])
     #ifdef DEBUG
     debug();
     #endif
-	return 0;
+
+    
+
+    return 0;
 }
 
