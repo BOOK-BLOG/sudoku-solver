@@ -13,3 +13,5 @@ sudoku-solver.xcodeproj
 Debug
 build
 sudoku-solver.build
+*.exe
+.vscode/
