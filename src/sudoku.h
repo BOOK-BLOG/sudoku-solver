@@ -1,5 +1,5 @@
-#ifndef SUDOKU_HPP
-#define SUDOKU_HPP
+#ifndef SUDOKU_H
+#define SUDOKU_H
 
 #include <iostream>
 #include <cstdio>
