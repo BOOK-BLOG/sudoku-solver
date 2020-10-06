@@ -86,6 +86,8 @@ public:
         data.at(i).at(j).set(block);
       }
     }
+
+    file.close();
   }
 
   void print() { cout << to_string(); }
