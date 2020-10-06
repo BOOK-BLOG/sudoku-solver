@@ -30,12 +30,13 @@ public:
 
   Sudoku() {}
 
-  Sudoku solve() { return Sudoku(); }
-
-  // Utils
   const string thick_horizontal_divider =
       "|===================================|\n";
   const string horizontal_divider = "|-----------------------------------|\n";
+
+  // Utils
+
+  Sudoku solve() { return Sudoku(); }
 
   char get(int x, int y) { return data.at(x).at(y).get(); }
 
