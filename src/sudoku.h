@@ -60,6 +60,14 @@ public:
     return row;
   }
 
+  array<SudokuBlock, 9> get_col(int index) {
+    array<SudokuBlock, 9> col;
+    for (int i = 0; i < 9; i++) {
+      col.at(i).set(SudokuBlock().set(get(i, index)));
+    }
+    return col;
+  }
+
   char set(int row, int col, char val) {
     data.at(row).at(col).set(val);
     return data.at(row).at(col).get();

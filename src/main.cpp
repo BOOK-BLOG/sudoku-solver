@@ -43,6 +43,13 @@ void debug() {
     cout << " | " << row.at(i).get();
   }
   cout << " | ";
+
+  cout << endl << "get_col()" << endl;
+  array<SudokuBlock, 9> col = sudoku.get_col(1);
+  for (int i = 0; i < 9; i++) {
+    cout << " | " << col.at(i).get();
+  }
+  cout << " | ";
 }
 #endif
 
