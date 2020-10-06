@@ -30,6 +30,12 @@ void debug() {
 
   cout << endl << "print()" << endl;
   sudoku.print();
+
+  cout << endl << "read_file(\"./test.sudoku\")" << endl;
+  sudoku.read_file("./test.sudoku");
+
+  cout << endl << "print()" << endl;
+  sudoku.print();
 }
 #endif
 

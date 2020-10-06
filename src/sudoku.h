@@ -56,7 +56,15 @@ public:
 
   void read_file(string path) {
     ifstream file;
-    file.open(path, ios::out | ios::in);
+    file.open(path, ios::in);
+
+    for (int i = 0; i < 9; i++) {
+      for (int j = 0; j < 9; j++) {
+        char block;
+        file >> block;
+        data.at(i).at(j).set(block);
+      }
+    }
   }
 
   void print() { cout << to_string(); }
