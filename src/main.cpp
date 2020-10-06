@@ -36,6 +36,14 @@ void debug() {
 
   cout << endl << "print()" << endl;
   sudoku.print();
+
+  cout << endl << "get_row()" << endl;
+  array<SudokuBlock, 9> row = sudoku.get_row(1);
+  for (int i = 0; i < 9; i++)
+  {
+      cout << " | " << row.at(i).get();
+  }
+  cout << " | ";
 }
 #endif
 

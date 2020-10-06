@@ -52,6 +52,15 @@ public:
 
   char get(int x, int y) { return data.at(x).at(y).get(); }
 
+  array<SudokuBlock, 9> get_row(int index){
+    array<SudokuBlock, 9> row;
+    for (int i = 0; i < 9; i++)
+    {
+        row.at(i).set(SudokuBlock().set(get(index, i)));
+    }
+    return row;
+  }
+
   char set(int x, int y, char val) {
     data.at(x).at(y).set(val);
     return data.at(x).at(y).get();
