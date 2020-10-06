@@ -39,7 +39,7 @@ public:
 
   char get(int x, int y) { return data.at(x).at(y).get(); }
 
-  void set(int x, int y, char val) { data.at(x).at(y).set(val); }
+  char set(int x, int y, char val) { data.at(x).at(y).set(val);return data.at(x).at(y).get(); }
 
   void command_line_input() {
     for (int i = 0; i < 9; i++) {
