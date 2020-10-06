@@ -17,23 +17,19 @@ public:
   char set(char val) {
     bool available = false;
     int availableCount = 11;
-    char availableVal[availableCount] = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '!'};
+    char availableVal[availableCount] = {'1', '2', '3', '4', '5', '6',
+                                         '7', '8', '9', '-', '!'};
 
-    for(int i = 0; i < availableCount; i++){
-      if (val == availableVal[i])
-      {
+    for (int i = 0; i < availableCount; i++) {
+      if (val == availableVal[i]) {
         available = true;
       }
-      
     }
 
-    if (available)
-    {
-        data = val;
-    }
-    else
-    {
-        data = '!';
+    if (available) {
+      data = val;
+    } else {
+      data = '!';
     }
 
     return data;
