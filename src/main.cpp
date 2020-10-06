@@ -12,10 +12,24 @@ using namespace std;
 #ifdef DEBUG
 void debug() {
   Sudoku sudoku = Sudoku();
+
+  cout << endl << "command_line_input()" << endl;
   sudoku.command_line_input();
+
+  cout << endl << "print()" << endl;
   sudoku.print();
+
   cout << endl << "to_string()" << endl;
   cout << sudoku.to_string();
+
+  cout << endl << "get(1, 5)" << endl;
+  cout << sudoku.get(1, 5);
+
+  cout << endl << "set(1, 5, -)" << endl;
+  sudoku.set(1, 5, '-');
+
+  cout << endl << "print()" << endl;
+  sudoku.print();
 }
 #endif
 

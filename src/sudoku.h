@@ -8,22 +8,53 @@
 
 using namespace std;
 
+class SudokuBlock {
+    public:
+    char data;
+
+    char get(){
+        return data;
+    }
+
+    char set(char val){
+        int valInt = val - '0';
+        if (0 <= valInt <= 9 || val == '-')
+        {
+            data = val;
+            return data;
+        }
+        return '!';
+    }
+};
+
 class Sudoku {
 public:
-  array<array<char, 9>, 9> data;
+  array<array<SudokuBlock, 9>, 9> data;
 
   Sudoku() {}
 
-  Sudoku solve() {}
+  Sudoku solve() {
+      return Sudoku();
+  }
 
   // Utils
-  string thick_horizontal_divider = "|===================================|\n";
-  string horizontal_divider = "|-----------------------------------|\n";
+  const string thick_horizontal_divider = "|===================================|\n";
+  const string horizontal_divider = "|-----------------------------------|\n";
+
+  char get(int x, int y){
+    return data.at(x).at(y).get();
+  }
+
+  void set(int x, int y, char val){
+      data.at(x).at(y).set(val);
+  }
 
   void command_line_input() {
     for (int i = 0; i < 9; i++) {
       for (int j = 0; j < 9; j++) {
-        cin >> data.at(i).at(j);
+        char input;
+        cin >> input;
+        data.at(i).at(j).set(input);
       }
     }
   }
@@ -45,7 +76,7 @@ public:
 
       for (int j = 0; j < 9; j++) {
 
-        char current_item = data.at(i).at(j);
+        char current_item = data.at(i).at(j).get();
 
         if (j == 0) {
           str = str + "| ";
