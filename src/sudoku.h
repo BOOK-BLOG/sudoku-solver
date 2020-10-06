@@ -50,7 +50,7 @@ public:
 
   Sudoku solve() { return Sudoku(); }
 
-  char get(int x, int y) { return data.at(x).at(y).get(); }
+  char get(int row, int col) { return data.at(row).at(col).get(); }
 
   array<SudokuBlock, 9> get_row(int index) {
     array<SudokuBlock, 9> row;
@@ -60,9 +60,9 @@ public:
     return row;
   }
 
-  char set(int x, int y, char val) {
-    data.at(x).at(y).set(val);
-    return data.at(x).at(y).get();
+  char set(int row, int col, char val) {
+    data.at(row).at(col).set(val);
+    return data.at(row).at(col).get();
   }
 
   void command_line_input() {
