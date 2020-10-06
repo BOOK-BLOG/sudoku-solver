@@ -1,0 +1,28 @@
+name: "Clang Code Formatter"
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: "Clang Code Format"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Install Clang
+        run: sudo apt-get install clang
+      - name: Format
+        run: clang-format --style=file -i src/*.cpp src/*.h
+      - name: Publish
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa.pub
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name "Clang Code Formatter"
+          git config --global user.email "nobody@nobody.nobody"
+          git config --global core.quotepath false
+          git add --all
+          git commit -m "Clang Code Format"
+          git push origin master
