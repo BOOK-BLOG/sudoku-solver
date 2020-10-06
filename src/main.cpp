@@ -26,7 +26,7 @@ void debug() {
   cout << sudoku.get(1, 5);
 
   cout << endl << "set(1, 5, -)" << endl;
-  sudoku.set(1, 5, '-');
+  cout << sudoku.set(1, 5, '-');
 
   cout << endl << "print()" << endl;
   sudoku.print();
