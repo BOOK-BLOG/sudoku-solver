@@ -11,9 +11,11 @@ jobs:
         with:
           fetch-depth: 1
       - name: Install Clang
-        run: sudo apt-get install clang
+        run: |
+          sudo apt-get update
+          sudo apt-get install clang-format-10
       - name: Format
-        run: clang-format --style=file -i src/*.cpp src/*.h
+        run: clang-format-10 --style=file -i src/*.cpp src/*.h
       - name: Publish
         run: |
           mkdir -p ~/.ssh/
