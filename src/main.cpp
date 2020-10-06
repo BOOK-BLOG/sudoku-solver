@@ -20,7 +20,7 @@ void debug()
 }
 #endif
 
-int main(int argc, char* agrv[])
+int main(int argc, char* argv[])
 {
     std::ios::sync_with_stdio(false); // Disable Cin/Cout Sync to make the program faster
     #ifdef DEBUG
