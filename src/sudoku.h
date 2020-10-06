@@ -15,12 +15,28 @@ public:
   char get() { return data; }
 
   char set(char val) {
-    int valInt = val - '0';
-    if (0 <= valInt <= 9 || val == '-') {
-      data = val;
-      return data;
+    bool available = false;
+    int availableCount = 11;
+    char availableVal[availableCount] = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '!'};
+
+    for(int i = 0; i < availableCount; i++){
+      if (val == availableVal[i])
+      {
+        available = true;
+      }
+      
     }
-    return '!';
+
+    if (available)
+    {
+        data = val;
+    }
+    else
+    {
+        data = '!';
+    }
+
+    return data;
   }
 };
 
